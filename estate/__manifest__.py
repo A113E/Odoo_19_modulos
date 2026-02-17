@@ -11,7 +11,10 @@
   'depends': [
     'base',
   ],
-  'data': [],
+  'data': [
+    # security
+    'security/ir.model.access.csv',
+  ],
   'demo': [],
   'qweb': [],
   'images': [],
