@@ -1,4 +1,5 @@
 from odoo import fields,models
+from datetime import timedelta
 
 class EstateProperty(models.Model):
   _name = 'estate.property'
@@ -19,7 +20,8 @@ class EstateProperty(models.Model):
   
   date_availability = fields.Date(
     string='Date Availability',
-    copy=False
+    copy=False,
+    default=lambda self: fields.Date.today() + timedelta(days=90)
   )
   
   expected_price = fields.Float(
@@ -34,7 +36,8 @@ class EstateProperty(models.Model):
   )
   
   bedrooms = fields.Integer(
-    string='Bedrooms'
+    string='Bedrooms',
+    default=2
   )
   
   living_area = fields.Integer(
@@ -70,4 +73,22 @@ class EstateProperty(models.Model):
       ('west','West')
     ],
     help='Indicate the orientation of the garden'
+  )
+  
+  active = fields.Boolean(
+    string='Active',
+    default=True
+  )
+  
+  state = fields.Selection(
+    string='State',
+    selection=[
+      ('new','New'),
+      ('offer received','Offer Received'),
+      ('offer accepted','Offer Accepted'),
+      ('sold','Sold'),
+      ('cancelled','Cancelled')
+    ],
+    help='Indicate the state of the property',
+    default='new'
   )
