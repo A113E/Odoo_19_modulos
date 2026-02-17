@@ -14,12 +14,17 @@
   'data': [
     # security
     'security/ir.model.access.csv',
+    
+    # views
+    'views/estate_property_views.xml',
+    
+    # menus
+    'views/estate_menus.xml',
   ],
   'demo': [],
   'qweb': [],
   'images': [],
   'installable': True,
   'application': True,
-  'auto_install': False,
-  'active': False
+  'auto_install': False
 }
