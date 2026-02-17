@@ -18,7 +18,8 @@ class EstateProperty(models.Model):
   )
   
   date_availability = fields.Date(
-    string='Date Availability'
+    string='Date Availability',
+    copy=False
   )
   
   expected_price = fields.Float(
@@ -27,7 +28,9 @@ class EstateProperty(models.Model):
   )
   
   selling_price = fields.Float(
-    string='Selling Price'
+    string='Selling Price',
+    readonly=True,
+    copy=False
   )
   
   bedrooms = fields.Integer(
