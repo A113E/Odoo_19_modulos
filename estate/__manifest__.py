@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 {
   'name': 'Estate',
-  'version': '14.0.1.0.0',
-  'category': 'Sales/CRM',
+  'version': '19.0.1.0.0',
   'summary': 'Modulo para la Gestión Inmobiliaria',
   'description': """
   """,
@@ -21,9 +20,6 @@
     # menus
     'views/estate_menus.xml',
   ],
-  'demo': [],
-  'qweb': [],
-  'images': [],
   'installable': True,
   'application': True,
   'auto_install': False

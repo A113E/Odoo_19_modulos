@@ -11,13 +11,7 @@
   <menuitem id="estate_property_menu"
     name="Properties"
     parent="estate_menu_root"
-    sequence="20" />
-
-  <!-- Acción del menú -->
-  <menuitem id="estate_property_menu_action"
-    name="Propiedades"
-    parent="estate_property_menu"
     action="estate_property_action"
-    sequence="30" />
+    sequence="20" />
 
 </odoo>
