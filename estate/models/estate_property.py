@@ -2,11 +2,18 @@ from odoo import fields,models
 from datetime import timedelta
 
 class EstateProperty(models.Model):
+  """Modelo para definir propiedades"""
   _name = 'estate.property'
   _description = 'Estate Property'
   
   name = fields.Char(
     string='Property Name',
+    required=True
+  )
+  
+  property_type_id = fields.Many2one(
+    'estate.property.type',
+    string='Property Type',
     required=True
   )
   

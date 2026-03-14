@@ -16,6 +16,7 @@
     
     # views
     'views/estate_property_views.xml',
+    'views/estate_property_type_views.xml',
     
     # menus
     'views/estate_menus.xml',

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <!--Vista List-->
+  <record id="estate_property_type_view_tree" model="ir.ui.view">
+    <field name="name">estate.property.type.list</field>
+    <field name="model">estate.property.type</field>
+    <field name="arch" type="xml">
+      <list string="Property Type">
+        <field name="name" />
+      </list>
+    </field>
+  </record>
+
+  <!--Vista
+  form-->
+  <record id="estate_property_type_view_form" model="ir.ui.view">
+    <field name="name">estate.property.type.form</field>
+    <field name="model">estate.property.type</field>
+    <field name="arch" type="xml">
+      <form string="Propertie Type">
+        <sheet>
+          <div class="oe_title">
+            <div class="oe_edit_only">
+              <label for="name" />
+            </div>
+            <h1 class="mb32">
+              <field name="name" class="mb16" required="1" />
+            </h1>
+          </div>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <!--Vista
+  search-->
+  <record id="estate_property_type_view_search" model="ir.ui.view">
+    <field name="name">estate.property.type.search</field>
+    <field name="model">estate.property.type</field>
+    <field name="arch" type="xml">
+      <search string="Search Type Property">
+        <field name="name" />
+      </search>
+    </field>
+  </record>
+
+  <!--Accion
+  para el modelo-->
+  <record id="estate_property_type_action" model="ir.actions.act_window">
+    <field name="name">Estate Property Type</field>
+    <field name="res_model">estate.property.type</field>
+    <field name="view_mode">list,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">
+        Properties Types
+      </p>
+      <p>
+        Add types of property here
+      </p>
+    </field>
+  </record>
+
+</odoo>

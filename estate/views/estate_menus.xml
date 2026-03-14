@@ -14,4 +14,20 @@
     action="estate_property_action"
     sequence="20" />
 
+  <!--Submenú
+  settings-->
+  <menuitem id="estate_settings_menu"
+    name="Settings"
+    parent="estate_menu_root"
+    sequence="99" />
+
+  <!--Sub-submenú
+  Tipos de propiedades-->
+  <menuitem
+    id="estate_property_type_menu"
+    name="Property Type"
+    parent="estate_settings_menu"
+    action="estate_property_type_action"
+    sequence="10" />
+
 </odoo>
